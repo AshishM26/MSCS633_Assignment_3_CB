@@ -15,3 +15,6 @@ htmlcov/
 build/
 dist/
 *.egg-info/
+
+# Local instructions, audit notes, and generated validation evidence
+/local-notes/

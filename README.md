@@ -55,8 +55,6 @@ chatbot_app/
   tests/                     Service, corpus, terminal and HTTP tests
 data/cloud_devops.yml         Custom conversations and assignment example
 docs/
-  VALIDATION.md              Runtime evidence and rubric assessment
-  test-results.txt           Actual Django test output
   screenshots/.gitkeep       Placeholder for a real screenshot
 ```
 
@@ -233,8 +231,9 @@ python manage.py test -v 2
 Tests use Django's isolated in-memory SQLite database. Most train tiny examples;
 corpus acceptance tests also check every custom question, repeat training, and
 unrelated inputs. Tests verify actual persistence changes, CSRF, validation,
-error handling, and terminal exits. See [validation evidence](docs/VALIDATION.md)
-and [actual test output](docs/test-results.txt).
+error handling, and terminal exits. Run the commands above to reproduce the
+checks. Local working notes and generated validation records are excluded from
+version control and source distributions.
 
 ## Screenshots
 
@@ -262,7 +261,7 @@ this coding task.
 | Python source | `manage.py`, `smartchat/`, `chatbot_app/` |
 | Manifest | `requirements.txt` and `MANIFEST.in` |
 | Training knowledge | Custom YAML and two selected English corpora |
-| Working runtime | Terminal and Django API; evidence in `docs/` |
+| Working runtime | Terminal and Django API; reproducible checks above |
 | Screenshot in Word | Capture real runtime and create Word report separately |
 | GitHub URL | Include the repository link below in the Word report |
 
