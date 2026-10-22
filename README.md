@@ -55,7 +55,7 @@ chatbot_app/
   tests/                     Service, corpus, terminal and HTTP tests
 data/cloud_devops.yml         Custom conversations and assignment example
 docs/
-  screenshots/.gitkeep       Placeholder for a real screenshot
+  screenshots/               Real runtime screenshots for the submission
 ```
 
 ## Prerequisites
@@ -183,9 +183,10 @@ and disables debug pages; it is not a production service.
 2. `chatterbot.corpus.english.conversations`
 3. `data/cloud_devops.yml`
 
-The custom file has **54 two-line Q&A conversations plus one four-line assignment
-example**, totaling 55 conversations. This exceeds the suggested 35–40 pairs to
-cover every requested topic and six paraphrases. Topics include general chat,
+The custom file has **63 two-line Q&A conversations plus one four-line assignment
+example**, totaling 64 conversations. This exceeds the suggested 35–40 pairs to
+cover every requested topic, capability questions, cloud basics, and natural
+paraphrases. Topics include general chat,
 standups, incidents, deployments, infrastructure, observability, RTO and RPO.
 Standard corpus greetings have several valid responses; exact wording can vary.
 
@@ -237,9 +238,15 @@ version control and source distributions.
 
 ## Screenshots
 
-`docs/screenshots/` is prepared with `.gitkeep`. **No screenshot has been fabricated
-or captured.** Run locally, capture a real screenshot, and add it here, for example
-`cloudops-demo.png`. Use a wide terminal and enter these lines one at a time:
+The author supplied these real application screenshots, stored in
+`docs/screenshots/` without modifying their content. The terminal capture shows
+learning switched OFF while trained answers remain available.
+
+![Terminal chatbot with learning OFF and trained responses](docs/screenshots/cloudops-learning-off.png)
+
+![Django health endpoint returning status ok](docs/screenshots/django-health.png)
+
+For a terminal screenshot, use a wide window and enter these lines one at a time:
 
 ```text
 Good morning!
@@ -250,9 +257,9 @@ What is Kubernetes?
 /status
 ```
 
-Capture the banner, answers and OFF status before `/exit`. Insert the image into
-the final Word report in the separate document workflow; that report is outside
-this coding task.
+For a new capture, include the banner, answers and OFF status before `/exit`.
+Insert the saved terminal screenshot into the final Word report in the separate
+document workflow; that report is outside this coding task.
 
 ## Assignment Deliverables
 
@@ -262,7 +269,7 @@ this coding task.
 | Manifest | `requirements.txt` and `MANIFEST.in` |
 | Training knowledge | Custom YAML and two selected English corpora |
 | Working runtime | Terminal and Django API; reproducible checks above |
-| Screenshot in Word | Capture real runtime and create Word report separately |
+| Screenshot in Word | Real captures provided in `docs/screenshots/`; insert into Word report separately |
 | GitHub URL | Include the repository link below in the Word report |
 
 `MANIFEST.in` uses real setuptools source-distribution directives, enabled by

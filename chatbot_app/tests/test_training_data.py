@@ -55,6 +55,22 @@ class CorpusRuntimeTests(TestCase):
                     service.get_response(question).text, settings.BOT_FALLBACK
                 )
 
+    def test_questions_from_user_terminal_with_learning_off(self):
+        call_command("train_bot", stdout=StringIO())
+        service = BotService(learning_enabled=False)
+        before = service.bot.storage.count()
+        questions = {
+            "what can I ask you": "Cloud and DevOps questions",
+            "what are you trained on": "English greetings and conversations",
+            "what is cloud ?": "Cloud computing provides on-demand access",
+        }
+        for question, expected in questions.items():
+            with self.subTest(question=question):
+                reply = service.get_response(question)
+                self.assertIn(expected, reply.text)
+                self.assertFalse(reply.learning_enabled)
+        self.assertEqual(service.bot.storage.count(), before)
+
     def test_retraining_preserves_existing_knowledge(self):
         service = BotService(learning_enabled=False)
         call_command("train_bot", stdout=StringIO())
