@@ -1,0 +1,6 @@
+include README.md requirements.txt manage.py pyproject.toml
+recursive-include smartchat *.py
+recursive-include chatbot_app *.py
+recursive-include data *.yml
+recursive-include docs *.md *.txt *.png *.jpg
+global-exclude __pycache__ *.py[cod] *.sqlite3
