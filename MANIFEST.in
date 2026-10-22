@@ -3,5 +3,6 @@ recursive-include smartchat *.py
 recursive-include chatbot_app *.py
 recursive-include data *.yml
 recursive-include docs/screenshots *.png *.jpg
+recursive-include docs/report *.docx
 prune local-notes
 global-exclude __pycache__ *.py[cod] *.sqlite3

@@ -56,6 +56,7 @@ chatbot_app/
 data/cloud_devops.yml         Custom conversations and assignment example
 docs/
   screenshots/               Real runtime screenshots for the submission
+  report/                    Final Word report with screenshots and GitHub URL
 ```
 
 ## Prerequisites
@@ -258,19 +259,23 @@ What is Kubernetes?
 ```
 
 For a new capture, include the banner, answers and OFF status before `/exit`.
-Insert the saved terminal screenshot into the final Word report in the separate
-document workflow; that report is outside this coding task.
+Both screenshots are embedded in the
+[final Word report](docs/report/MSCS633_Assignment_3_Report.docx), together with
+the implementation summary, GitHub URL, and validation results.
 
 ## Assignment Deliverables
 
-| Required item | Artifact / remaining step |
+| Required item | Artifact |
 | --- | --- |
 | Python source | `manage.py`, `smartchat/`, `chatbot_app/` |
 | Manifest | `requirements.txt` and `MANIFEST.in` |
 | Training knowledge | Custom YAML and two selected English corpora |
 | Working runtime | Terminal and Django API; reproducible checks above |
-| Screenshot in Word | Real captures provided in `docs/screenshots/`; insert into Word report separately |
-| GitHub URL | Include the repository link below in the Word report |
+| Screenshot in Word | `docs/report/MSCS633_Assignment_3_Report.docx` includes both real captures |
+| GitHub URL | Included in the Word report and below |
+
+Upload the Word report, `MANIFEST.in`, and `requirements.txt` for submission.
+The report links to this repository for the Python source and setup instructions.
 
 `MANIFEST.in` uses real setuptools source-distribution directives, enabled by
 `pyproject.toml`. Run from the checkout or extracted source archive so `data/`
